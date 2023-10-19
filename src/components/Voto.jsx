@@ -1,14 +1,20 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-const Voto=()=>{
-    const[like,setLike]=useState(0)
-
-    return(
-        <div>
-            <button>Me gusta</button>
-            <button>No me gusta</button>
-        </div>
-    )
-}
+const Voto = () => {
+  const [like, setLike] = useState(0);
+  console.log(like);
+  const clickMeGusta = () => {
+    setLike(1);
+  };
+  const clickNoMeGusta = () => {
+    setLike(-1);
+  };
+  return (
+    <section>
+      <button onClick={clickMeGusta}>Me gusta</button>
+      <button onClick={clickNoMeGusta}>No me gusta</button>
+    </section>
+  );
+};
 
 export default Voto;

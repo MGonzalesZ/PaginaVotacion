@@ -1,11 +1,17 @@
-import CuadroMensaje from "./CuadroMensaje";
+import Card from './Card';
+import CuadroMensaje from './CuadroMensaje';
+import Voto from './Voto';
 
-const Fondo =(props)=>{  
-    return(
-        <div style={props.estilo}>
-            <CuadroMensaje mensaje={props.mensaje}/>
-        </div>
-    )
-}
+const Fondo = (props) => {
+  return (
+    <Card className="fondo">
+      <CuadroMensaje mensaje={props.mensaje} parestilo={props.parestilo} />
+      <div>
+        <br />
+      </div>
+      <Voto />
+    </Card>
+  );
+};
 
 export default Fondo;
